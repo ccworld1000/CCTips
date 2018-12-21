@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <CCTips.h>
 
 @interface ViewController ()
 
@@ -18,6 +19,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+- (IBAction)logHandle:(UIButton *)button {
+    CCTipsForNSLog(button.titleLabel.text);
+}
+
+- (IBAction)viewHandle:(UIButton *)button {
+    CCTipsForView(button.titleLabel.text);
+}
+
+- (IBAction)windowHandle:(UIButton *)button {
+    CCTipsForKeyWindow(button.titleLabel.text);
+}
+
+
 
 
 @end

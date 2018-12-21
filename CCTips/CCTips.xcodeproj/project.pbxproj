@@ -84,7 +84,6 @@
 				83633C3B0DAA314FBEF6B78E /* Pods-CCTips.debug.xcconfig */,
 				9BCEDC46C1EA2AFC6CE8B467 /* Pods-CCTips.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

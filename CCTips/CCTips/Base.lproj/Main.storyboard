@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,57 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-OE-hJo">
+                                <rect key="frame" x="127.5" y="303.5" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.31493812920000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="E8q-GF-GxF"/>
+                                    <constraint firstAttribute="width" constant="120" id="yKA-nK-pVA"/>
+                                </constraints>
+                                <state key="normal" title="test view"/>
+                                <connections>
+                                    <action selector="viewHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l3m-uY-5Y9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-lL-MYT">
+                                <rect key="frame" x="127.5" y="383.5" width="120" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.37843435399999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hx6-fv-iH5"/>
+                                    <constraint firstAttribute="width" constant="120" id="zfP-3G-boV"/>
+                                </constraints>
+                                <state key="normal" title="test window"/>
+                                <connections>
+                                    <action selector="windowHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9A-IA-b1x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ct-25-53Q">
+                                <rect key="frame" x="127.5" y="223.5" width="120" height="60"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.35686274509999999" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3qZ-a7-Ppz"/>
+                                    <constraint firstAttribute="width" constant="120" id="trl-vA-Mid"/>
+                                </constraints>
+                                <state key="normal" title="test log"/>
+                                <connections>
+                                    <action selector="logHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LDb-y9-C2q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9a3-OE-hJo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R0g-ix-Yi9"/>
+                            <constraint firstItem="9a3-OE-hJo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SRL-Ga-qOM"/>
+                            <constraint firstItem="U4e-lL-MYT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VjU-s8-JEI"/>
+                            <constraint firstItem="U4e-lL-MYT" firstAttribute="top" secondItem="9a3-OE-hJo" secondAttribute="bottom" constant="20" id="mj8-2H-TL4"/>
+                            <constraint firstItem="9a3-OE-hJo" firstAttribute="top" secondItem="5Ct-25-53Q" secondAttribute="bottom" constant="20" id="ucg-cb-7b9"/>
+                            <constraint firstItem="5Ct-25-53Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xTc-tM-TgU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
